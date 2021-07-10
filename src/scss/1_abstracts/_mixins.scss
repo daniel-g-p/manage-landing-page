@@ -1,0 +1,12 @@
+@mixin responsive($screen-width) {
+    @media(min-width: $screen-width) {
+        @content;
+    }
+}
+
+@mixin flexbox($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

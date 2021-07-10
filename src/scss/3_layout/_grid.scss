@@ -1,0 +1,5 @@
+.container {
+    display: grid;
+    grid-template-columns: [page-start] 1.5rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 1.5rem [page-end];
+    grid-auto-rows: max-content;
+}

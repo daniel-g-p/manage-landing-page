@@ -1,1 +1,5 @@
-@use "1_abstracts";
+@use "./1_abstracts/index";
+@use "./2_base/typography";
+@use "./2_base/reset";
+@use "./3_layout/grid";
+@use "./3_layout/header";
