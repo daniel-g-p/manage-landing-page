@@ -16,6 +16,18 @@
   font-weight: 400;
   font-style: normal;
 }
+.heading-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d1e25;
+  line-height: 1.25;
+}
+
+.paragraph {
+  color: #9095a7;
+  line-height: 2;
+}
+
 *,
 *::before,
 *::after {
@@ -30,6 +42,7 @@ html {
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container {
@@ -191,9 +204,74 @@ body {
   bottom: 0;
 }
 
+.hero {
+  grid-column: content-start/content-end;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+@media (min-width: 48em) {
+  .hero__content {
+    flex: 0 0 50%;
+    margin-right: 3rem;
+  }
+}
+@media (min-width: 60em) {
+  .hero__content {
+    margin-right: 6rem;
+  }
+}
+.hero__title {
+  margin-bottom: 1rem;
+}
+.hero__text {
+  margin-bottom: 2.5rem;
+}
+.hero__image {
+  margin-bottom: 1.5rem;
+}
+.hero__image img {
+  display: block;
+  width: 100%;
+}
+
+.background__pill {
+  position: absolute;
+  top: -25vw;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 125vw;
+  height: 50vw;
+  background-color: #ffefeb;
+  border-radius: 25vw;
+  transform-origin: center right;
+}
+.background__pill--1 {
+  transform: rotate(-45deg) translateX(12.5vw);
+}
+@media (min-width: 48em) {
+  .background__pill--1 {
+    top: -12.5vw;
+    width: 75vw;
+    height: 25vw;
+  }
+}
+
 .button:link, .button:visited {
   padding: 0.75em 1.5em;
-  border-radius: 1.25em;
+  border-radius: 1.5em;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.25s ease;
