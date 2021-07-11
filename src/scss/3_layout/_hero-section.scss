@@ -1,0 +1,35 @@
+@use "../1_abstracts/" as *;
+.hero {
+    grid-column: content-start / content-end;
+    grid-row: 2 / 3;
+    @include flexbox(column-reverse);
+    padding: 1.5rem 0;
+    text-align: center;
+    @include responsive($screen-m) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    &__content {
+        @include responsive($screen-m) {
+            flex: 0 0 50%;
+            margin-right: 3rem;
+        }
+        @include responsive($screen-l) {
+            margin-right: 6rem;
+        }
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__text {
+        margin-bottom: 2.5rem;
+    }
+    &__image {
+        margin-bottom: 1.5rem;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use "../1_abstracts/" as *;
+.background {
+    &__pill {
+        position: absolute;
+        top: -25vw;
+        right: 0;
+        z-index: -1;
+        display: block;
+        width: 125vw;
+        height: 50vw;
+        background-color: $color-red-light;
+        border-radius: 25vw;
+        transform-origin: center right;
+        &--1 {
+            transform: rotate(-45deg) translateX(12.5vw);
+            @include responsive($screen-m) {
+                top: -12.5vw;
+                width: 75vw;
+                height: 25vw;
+            }
+        }
+    }
+}
