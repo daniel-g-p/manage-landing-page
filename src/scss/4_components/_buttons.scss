@@ -1,0 +1,20 @@
+@use "../1_abstracts/" as *;
+.button {
+    &:link,
+    &:visited {
+        padding: 0.75em 1.5em;
+        border-radius: 1.25em;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.25s ease;
+    }
+    &--red {
+        color: $color-grey-light;
+        background-color: $color-red;
+        box-shadow: 0 0.5em 1em -0.25em lighten($color-red, 25%);
+        &:hover,
+        &:focus {
+            background-color: lighten($color-red, 10%);
+        }
+    }
+}

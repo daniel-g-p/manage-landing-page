@@ -1,5 +1,12 @@
+@use "../1_abstracts/" as *;
 .container {
     display: grid;
     grid-template-columns: [page-start] 1.5rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 1.5rem [page-end];
     grid-auto-rows: max-content;
+    @include responsive($screen-s) {
+        grid-template-columns: [page-start] 3rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 3rem [page-end];
+    }
+    @include responsive($screen-l) {
+        grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
+    }
 }

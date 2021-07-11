@@ -5,6 +5,9 @@
     grid-row: 1 / 2;
     padding: 1.5rem 0;
     @include flexbox(row, space-between, center);
+    @include responsive($screen-s) {
+        padding: 3rem 0;
+    }
     &__logo {
         height: 1.5rem;
         img {
@@ -26,6 +29,19 @@
         transform: translateY(-1rem);
         opacity: 0;
         transition: transform 0.5s ease, opacity 0.5s ease;
+        @include responsive($screen-l) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: auto;
+            flex-direction: row;
+            padding: 0;
+            transform: translate(0);
+            opacity: 1;
+            pointer-events: all;
+            background-color: transparent;
+            box-shadow: none;
+        }
         &--active {
             transform: translate(0);
             opacity: 1;
@@ -39,6 +55,12 @@
             color: $color-blue-dark;
             text-decoration: none;
             transition: color 0.25s ease;
+            @include responsive($screen-l) {
+                margin: 0 0.5rem;
+            }
+            @include responsive($screen-xl) {
+                margin: 0 1rem;
+            }
         }
         &:hover,
         &:focus {
@@ -46,10 +68,16 @@
         }
         &:not(:last-child) {
             margin-bottom: 1rem;
+            @include responsive($screen-l) {
+                margin-bottom: 0;
+            }
         }
     }
     &__button {
         display: none;
+        @include responsive($screen-l) {
+            display: inline-block;
+        }
     }
     &__toggle {
         position: relative;
@@ -58,7 +86,9 @@
         height: 1.5rem;
         cursor: pointer;
         color: $color-blue-dark;
-        transition: color 0.25s ease;
+        @include responsive($screen-l) {
+            display: none;
+        }
         &:hover {
             color: $color-grey;
         }
