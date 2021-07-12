@@ -2,12 +2,13 @@
 .hero {
     grid-column: content-start / content-end;
     grid-row: 2 / 3;
+    padding: 2rem 0 6rem;
     @include flexbox(column-reverse);
-    padding: 1.5rem 0;
     text-align: center;
     @include responsive($screen-m) {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         text-align: left;
     }
     &__content {
@@ -23,6 +24,7 @@
         margin-bottom: 1rem;
     }
     &__text {
+        font-size: 1.25rem;
         margin-bottom: 2.5rem;
     }
     &__image {

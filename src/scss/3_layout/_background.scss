@@ -2,19 +2,32 @@
 .background {
     &__pill {
         position: absolute;
-        top: -25vw;
-        right: 0;
         z-index: -1;
         display: block;
         width: 125vw;
         height: 50vw;
         background-color: $color-red-light;
         border-radius: 25vw;
-        transform-origin: center right;
         &--1 {
+            top: -25vw;
+            right: 0;
+            transform-origin: center right;
             transform: rotate(-45deg) translateX(12.5vw);
             @include responsive($screen-m) {
+                transform: rotate(-45deg) translateX(25vw);
                 top: -12.5vw;
+                width: 75vw;
+                height: 25vw;
+            }
+        }
+        &--2 {
+            display: none;
+            transform-origin: center left;
+            @include responsive($screen-m) {
+                display: block;
+                transform: rotate(-45deg) translateX(-67.5vw);
+                top: 25%;
+                left: 0;
                 width: 75vw;
                 height: 25vw;
             }

@@ -25,6 +25,23 @@
     font-weight: 700;
     color: $color-blue-dark;
     line-height: 1.25;
+    @include responsive($screen-l) {
+        font-size: 3.25rem;
+    }
+}
+
+.heading-2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-blue-dark;
+    line-height: 1.5;
+}
+
+.heading-3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-blue-dark;
+    line-height: 1.5;
 }
 
 .paragraph {
